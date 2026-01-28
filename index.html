@@ -312,17 +312,17 @@
     .naver-cafe-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 16px 28px;
+      gap: 6px;
+      padding: 14px 20px;
       background: linear-gradient(135deg, #03C75A, #02b350);
       color: #fff;
       border: none;
       border-radius: 16px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
-      box-shadow: 0 10px 30px rgba(3, 199, 90, 0.4);
+      box-shadow: 0 8px 25px rgba(3, 199, 90, 0.4);
       text-decoration: none;
       transition: all 0.3s;
     }
@@ -330,6 +330,47 @@
     .naver-cafe-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 15px 40px rgba(3, 199, 90, 0.5);
+    }
+    
+    .link-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      padding: 0 20px;
+    }
+    
+    .insta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      box-shadow: 0 8px 25px rgba(193, 53, 132, 0.4);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .insta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(193, 53, 132, 0.5);
+    }
+    
+    .insta-btn.insta-story {
+      background: linear-gradient(135deg, #F77737, #FCAF45, #FFDC80);
+      box-shadow: 0 8px 25px rgba(247, 119, 55, 0.4);
+    }
+    
+    .insta-btn.insta-story:hover {
+      box-shadow: 0 12px 35px rgba(247, 119, 55, 0.5);
     }
     
     /* 패널 */
@@ -898,10 +939,294 @@
       color: #8B7355;
       padding: 20px;
     }
+    
+    /* 봉사 후기 */
+    .review-toggle-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #A5D6A7, #81C784);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      box-shadow: 0 4px 15px rgba(129, 199, 132, 0.3);
+      transition: all 0.3s;
+    }
+    
+    .review-toggle-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(129, 199, 132, 0.4);
+    }
+    
+    .volunteer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .volunteer-apply-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #FFB74D, #FFA726);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      box-shadow: 0 4px 15px rgba(255, 167, 38, 0.3);
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .volunteer-apply-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 167, 38, 0.4);
+    }
+    
+    .review-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .review-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .review-form input, .review-form textarea {
+      padding: 12px 15px;
+      border: 2px solid #DEB887;
+      border-radius: 12px;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      outline: none;
+    }
+    
+    .review-form input:focus, .review-form textarea:focus {
+      border-color: #5D4E37;
+    }
+    
+    .review-form textarea {
+      min-height: 80px;
+      resize: none;
+    }
+    
+    .review-submit-btn {
+      padding: 12px;
+      background: linear-gradient(135deg, #66BB6A, #43A047);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    
+    .review-photo-upload {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .photo-upload-btn {
+      padding: 12px;
+      background: #f5f5f5;
+      border: 2px dashed #DEB887;
+      border-radius: 12px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #8B7355;
+      transition: all 0.2s;
+    }
+    
+    .photo-upload-btn:hover {
+      background: #FFF9E6;
+      border-color: #5D4E37;
+    }
+    
+    #review-photo-preview {
+      position: relative;
+      display: none;
+    }
+    
+    #review-photo-preview img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    
+    #review-photo-preview .remove-photo {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 24px;
+      height: 24px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .review-item-photo {
+      margin-top: 10px;
+    }
+    
+    .review-item-photo img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .review-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    .review-item {
+      background: #FFF9E6;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    
+    .review-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .review-item-nickname {
+      font-weight: 700;
+      color: #5D4E37;
+    }
+    
+    .review-item-date {
+      font-size: 12px;
+      color: #8B7355;
+    }
+    
+    .review-item-content {
+      color: #5D4E37;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .no-review {
+      text-align: center;
+      color: #8B7355;
+      padding: 30px;
+    }
 
     #quiz-section {
       display: none;
       padding: 20px 16px;
+    }
+    
+    /* 후원 섹션 */
+    #donate-section {
+      padding: 20px;
+    }
+    
+    .donate-container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .donate-header {
+      margin-bottom: 30px;
+    }
+    
+    .donate-header h2 {
+      color: #5D4E37;
+      margin: 15px 0 10px;
+    }
+    
+    .donate-header p {
+      color: #8B7355;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .donate-account-box {
+      background: linear-gradient(135deg, #FFF9E6, #FFF3CD);
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .donate-bank {
+      font-size: 14px;
+      color: #8B7355;
+      margin-bottom: 5px;
+    }
+    
+    .donate-account {
+      font-size: 24px;
+      font-weight: 900;
+      color: #5D4E37;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    
+    .donate-name {
+      font-size: 14px;
+      color: #8B7355;
+      margin-bottom: 15px;
+    }
+    
+    .donate-copy-btn {
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #66BB6A, #43A047);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      transition: all 0.3s;
+    }
+    
+    .donate-copy-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    }
+    
+    .donate-info {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    .donate-info p {
+      color: #5D4E37;
+      font-size: 13px;
+      margin: 8px 0;
     }
     
     .quiz-container {
@@ -1264,6 +1589,9 @@
         <button class="tab-btn" id="tab-game" onclick="showTab('game')">
           🎮 게임하기
         </button>
+        <button class="tab-btn" id="tab-donate" onclick="showTab('donate')">
+          💰 후원하기
+        </button>
       </div>
     </header>
 
@@ -1282,11 +1610,52 @@
         <div id="rooms-container"></div>
       </div>
       
-      <!-- 네이버카페 버튼 -->
-      <div style="text-align: center; margin-top: 24px;">
+      <!-- 링크 버튼들 -->
+      <div class="link-buttons">
         <a href="https://cafe.naver.com/f-e/cafes/25825169/articles/19496?boardtype=L&menuid=167&referrerAllArticles=false" target="_blank" class="naver-cafe-btn">
-          ☕ 천보금 네이버카페 방문하기
+          ☕ 네이버카페
         </a>
+        <a href="https://www.instagram.com/angels_nest" target="_blank" class="insta-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          소장님
+        </a>
+        <a href="https://www.instagram.com/angels_nest_story" target="_blank" class="insta-btn insta-story">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          천보금
+        </a>
+      </div>
+      
+      <!-- 봉사 버튼들 -->
+      <div class="volunteer-buttons">
+        <button class="review-toggle-btn" onclick="toggleReviewSection()">
+          📝 봉사 후기 보기
+        </button>
+        <a href="https://open.kakao.com/o/sOHEe74h" target="_blank" class="volunteer-apply-btn">
+          ✋ 봉사 신청하기
+        </a>
+      </div>
+      
+      <!-- 봉사 후기 섹션 -->
+      <div id="review-section" style="display: none; padding: 20px;">
+        <div class="review-container">
+          <h3 style="text-align: center; color: #5D4E37; margin-bottom: 20px;">📝 봉사 후기</h3>
+          
+          <!-- 후기 작성 -->
+          <div class="review-form">
+            <input type="text" id="review-nickname" placeholder="닉네임" maxlength="10">
+            <input type="date" id="review-date">
+            <textarea id="review-content" placeholder="봉사 후기를 남겨주세요! (최대 200자)" maxlength="200"></textarea>
+            <div class="review-photo-upload">
+              <label for="review-photo" class="photo-upload-btn">📷 사진 첨부 (선택)</label>
+              <input type="file" id="review-photo" accept="image/*" onchange="previewReviewPhoto(this)" style="display: none;">
+              <div id="review-photo-preview"></div>
+            </div>
+            <button class="review-submit-btn" onclick="submitReview()">후기 등록</button>
+          </div>
+          
+          <!-- 후기 목록 -->
+          <div id="review-list" class="review-list"></div>
+        </div>
       </div>
     </div>
 
@@ -1457,6 +1826,30 @@
             <span id="name-score">점수: 0 / 0</span>
           </div>
           <div id="name-quiz-content" class="name-quiz-content"></div>
+        </div>
+      </div>
+    </div>
+
+  <!-- 후원 섹션 -->
+    <div id="donate-section" style="display: none;">
+      <div class="donate-container">
+        <div class="donate-header">
+          <span style="font-size: 50px;">🐕💛</span>
+          <h2>천보금 후원 안내</h2>
+          <p>200마리 아이들의 밥값, 병원비, 운영비로<br>소중하게 사용됩니다</p>
+        </div>
+        
+        <div class="donate-account-box">
+          <p class="donate-bank">국민은행</p>
+          <p class="donate-account">427501-04-139649</p>
+          <p class="donate-name">예금주: 사단법인 천사들의 보금자리</p>
+          <button class="donate-copy-btn" onclick="copyDonateAccount()">📋 계좌번호 복사</button>
+        </div>
+        
+        <div class="donate-info">
+          <p>💕 정기후원, 일시후원 모두 감사합니다</p>
+          <p>🧾 기부금 영수증 발급 가능합니다</p>
+          <p>📸 후원금 사용 내역은 네이버 카페에서 확인하실 수 있어요</p>
         </div>
       </div>
     </div>
@@ -1667,11 +2060,13 @@
       document.getElementById('tab-home').classList.remove('active');
       document.getElementById('tab-quiz').classList.remove('active');
       document.getElementById('tab-game').classList.remove('active');
+      document.getElementById('tab-donate').classList.remove('active');
       document.getElementById('tab-' + tab).classList.add('active');
       
       document.getElementById('home-section').style.display = 'none';
       document.getElementById('quiz-section').style.display = 'none';
       document.getElementById('game-section').style.display = 'none';
+      document.getElementById('donate-section').style.display = 'none';
       
       if (tab === 'home') {
         document.getElementById('home-section').style.display = 'block';
@@ -1681,7 +2076,28 @@
       } else if (tab === 'game') {
         document.getElementById('game-section').style.display = 'block';
         backToGameMenu();
+      } else if (tab === 'donate') {
+        document.getElementById('donate-section').style.display = 'block';
       }
+    }
+    
+    function copyDonateAccount() {
+      const account = '427501-04-139649';
+      navigator.clipboard.writeText(account).then(() => {
+        const btn = document.querySelector('.donate-copy-btn');
+        btn.textContent = '✅ 복사완료!';
+        setTimeout(() => {
+          btn.textContent = '📋 계좌번호 복사';
+        }, 2000);
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = account;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert('계좌번호가 복사되었습니다!');
+      });
     }
     
     // 게임 관련 변수
@@ -1786,23 +2202,42 @@
       const rankings = JSON.parse(localStorage.getItem(storageKey) || '{}');
       const container = document.getElementById(elementId);
       
-      // 객체를 배열로 변환 후 점수순 정렬
-      const rankingArray = Object.entries(rankings)
-        .map(([nickname, score]) => ({ nickname, score }))
-        .sort((a, b) => b.score - a.score);
+      // 객체를 배열로 변환 후 정렬
+      let rankingArray;
+      if (storageKey === 'cardRanking') {
+        // 카드 게임은 시간순 (빠를수록 좋음)
+        rankingArray = Object.entries(rankings)
+          .map(([nickname, time]) => ({ nickname, time }))
+          .sort((a, b) => a.time - b.time);
+      } else {
+        // 이름 맞추기는 점수순 (높을수록 좋음)
+        rankingArray = Object.entries(rankings)
+          .map(([nickname, score]) => ({ nickname, score }))
+          .sort((a, b) => b.score - a.score);
+      }
       
       if (rankingArray.length === 0) {
         container.innerHTML = '<p class="no-ranking">아직 기록이 없어요!</p>';
         return;
       }
       
-      container.innerHTML = rankingArray.slice(0, 10).map((item, index) => `
-        <div class="ranking-item">
-          <span class="rank">${index + 1}위</span>
-          <span class="nickname">${item.nickname}</span>
-          <span class="score">${item.score}점</span>
-        </div>
-      `).join('');
+      if (storageKey === 'cardRanking') {
+        container.innerHTML = rankingArray.slice(0, 10).map((item, index) => `
+          <div class="ranking-item">
+            <span class="rank">${index + 1}위</span>
+            <span class="nickname">${item.nickname}</span>
+            <span class="score">${item.time}초</span>
+          </div>
+        `).join('');
+      } else {
+        container.innerHTML = rankingArray.slice(0, 10).map((item, index) => `
+          <div class="ranking-item">
+            <span class="rank">${index + 1}위</span>
+            <span class="nickname">${item.nickname}</span>
+            <span class="score">${item.score}점</span>
+          </div>
+        `).join('');
+      }
     }
     
     function saveRanking(storageKey, score) {
@@ -1822,19 +2257,7 @@
     }
     
     // 카드 뒤집기 게임
-    const cardLevels = [
-      { level: 1, pairs: 4, cols: 4 },   // 8개
-      { level: 2, pairs: 6, cols: 4 },   // 12개
-      { level: 3, pairs: 8, cols: 4 },   // 16개
-      { level: 4, pairs: 10, cols: 5 },  // 20개
-      { level: 5, pairs: 12, cols: 6 }   // 24개
-    ];
-    let currentCardLevel = 0;
-    let totalCardScore = 0;
-    
     function startCardGame() {
-      currentCardLevel = 0;
-      totalCardScore = 0;
       cardGameStartTime = Date.now();
       
       // 타이머 시작
@@ -1845,12 +2268,6 @@
       document.querySelector('.game-menu').style.display = 'none';
       document.getElementById('card-game').style.display = 'block';
       document.getElementById('card-result').style.display = 'none';
-      startCardLevel();
-    }
-    
-    function startCardLevel() {
-      const levelInfo = cardLevels[currentCardLevel];
-      document.getElementById('card-result').style.display = 'none';
       
       // 이미지가 있는 강아지만 선택
       const allDogs = [];
@@ -1860,16 +2277,16 @@
         });
       }
       
-      // 랜덤으로 선택
-      const shuffled = allDogs.sort(() => Math.random() - 0.5).slice(0, levelInfo.pairs);
+      // 랜덤으로 8마리 선택 (8쌍 = 16개 카드)
+      const shuffled = allDogs.sort(() => Math.random() - 0.5).slice(0, 8);
       cardGameDogs = [...shuffled, ...shuffled].sort(() => Math.random() - 0.5);
       
       flippedCards = [];
       matchedPairs = 0;
-      document.getElementById('card-score').textContent = `${currentNickname} | ${levelInfo.level}단계 | 맞춘 쌍: 0/${levelInfo.pairs}`;
+      document.getElementById('card-score').textContent = `${currentNickname} | 맞춘 쌍: 0/8`;
       
       const grid = document.getElementById('card-grid');
-      grid.style.gridTemplateColumns = `repeat(${levelInfo.cols}, 1fr)`;
+      grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
       grid.innerHTML = '';
       
       cardGameDogs.forEach((dog, index) => {
@@ -1895,52 +2312,29 @@
     
     function checkMatch() {
       const [first, second] = flippedCards;
-      const levelInfo = cardLevels[currentCardLevel];
       
       if (first.dog.name === second.dog.name) {
         first.card.classList.add('matched');
         second.card.classList.add('matched');
         matchedPairs++;
-        document.getElementById('card-score').textContent = `${currentNickname} | ${levelInfo.level}단계 | 맞춘 쌍: ${matchedPairs}/${levelInfo.pairs}`;
+        document.getElementById('card-score').textContent = `${currentNickname} | 맞춘 쌍: ${matchedPairs}/8`;
         
-        // 현재 단계 클리어
-        if (matchedPairs === levelInfo.pairs) {
-          const levelScore = (levelInfo.level * 100);
-          totalCardScore += levelScore;
+        // 모든 쌍 맞춤
+        if (matchedPairs === 8) {
+          clearInterval(cardTimerInterval);
+          cardTimerInterval = null;
           
-          if (currentCardLevel < 4) {
-            // 다음 단계로
-            setTimeout(() => {
-              document.getElementById('card-result').style.display = 'block';
-              document.getElementById('card-result-text').innerHTML = `
-                <p>🎉 ${levelInfo.level}단계 클리어!</p>
-                <p>+${levelScore}점 (현재 총점: ${totalCardScore}점)</p>
-                <button class="game-btn" onclick="nextCardLevel()">다음 단계 →</button>
-              `;
-            }, 500);
-          } else {
-            // 모든 단계 클리어
-            clearInterval(cardTimerInterval);
-            cardTimerInterval = null;
-            
-            const timeTaken = Math.floor((Date.now() - cardGameStartTime) / 1000);
-            const timeBonus = Math.max(500 - (timeTaken * 2), 0);
-            const finalScore = totalCardScore + timeBonus;
-            
-            saveRanking('cardRanking', finalScore);
-            
-            setTimeout(() => {
-              document.getElementById('card-result').style.display = 'block';
-              document.getElementById('card-result-text').innerHTML = `
-                <p>🏆 모든 단계 클리어!</p>
-                <p>⏱️ 총 소요 시간: ${timeTaken}초</p>
-                <p>단계 점수: ${totalCardScore}점</p>
-                <p>시간 보너스: +${timeBonus}점</p>
-                <p style="font-size: 24px; color: #66BB6A; margin: 10px 0;">🎯 최종 점수: ${finalScore}점</p>
-                <button class="game-btn" style="margin-right: 10px;" onclick="shareCardScore(${finalScore}, ${timeTaken})">📢 공유하기</button>
-              `;
-            }, 500);
-          }
+          const timeTaken = ((Date.now() - cardGameStartTime) / 1000).toFixed(2);
+          
+          saveCardRanking(parseFloat(timeTaken));
+          
+          setTimeout(() => {
+            document.getElementById('card-result').style.display = 'block';
+            document.getElementById('card-result-text').innerHTML = `
+              <p style="font-size: 28px; color: #66BB6A; margin: 10px 0;">⏱️ ${timeTaken}초</p>
+              <button class="game-btn" style="margin-right: 10px;" onclick="shareCardScore(${timeTaken})">📢 공유하기</button>
+            `;
+          }, 500);
         }
       } else {
         first.card.classList.remove('flipped');
@@ -1952,13 +2346,19 @@
       flippedCards = [];
     }
     
-    function nextCardLevel() {
-      currentCardLevel++;
-      startCardLevel();
+    function saveCardRanking(time) {
+      const rankings = JSON.parse(localStorage.getItem('cardRanking') || '{}');
+      
+      // 기존 기록이 없거나 새 기록이 더 빠르면 저장
+      if (!rankings[currentNickname] || time < rankings[currentNickname]) {
+        rankings[currentNickname] = time;
+      }
+      
+      localStorage.setItem('cardRanking', JSON.stringify(rankings));
     }
     
-    function shareCardScore(score, time) {
-      const shareText = `🃏 천보금 카드 뒤집기 게임!\n\n🎮 플레이어: ${currentNickname}\n🏆 5단계 올클리어!\n⏱️ 소요 시간: ${time}초\n🎯 점수: ${score}점\n\n나도 도전하기 👇\nhttps://ggong162212-commits.github.io/dog/`;
+    function shareCardScore(time) {
+      const shareText = `🃏 천보금 카드 뒤집기 게임!\n\n🎮 플레이어: ${currentNickname}\n⏱️ 기록: ${time}초\n\n나도 도전하기 👇\nhttps://ggong162212-commits.github.io/dog/`;
       
       navigator.clipboard.writeText(shareText).then(() => {
         alert('텍스트가 복사되었습니다!\n지인에게 보내주세요 💛');
@@ -2115,6 +2515,150 @@
       navigator.clipboard.writeText(shareText).then(() => {
         alert('텍스트가 복사되었습니다!\n지인에게 보내주세요 💛');
       });
+    }
+
+    // 봉사 후기 기능
+    let reviewPhotoData = null;
+    
+    function toggleReviewSection() {
+      const section = document.getElementById('review-section');
+      const btn = document.querySelector('.review-toggle-btn');
+      
+      if (section.style.display === 'none') {
+        section.style.display = 'block';
+        btn.textContent = '📝 봉사 후기 접기';
+        loadReviews();
+      } else {
+        section.style.display = 'none';
+        btn.textContent = '📝 봉사 후기 보기';
+      }
+    }
+    
+    function previewReviewPhoto(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          // 이미지 리사이즈
+          const img = new Image();
+          img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const maxSize = 300;
+            let width = img.width;
+            let height = img.height;
+            
+            if (width > height) {
+              if (width > maxSize) {
+                height *= maxSize / width;
+                width = maxSize;
+              }
+            } else {
+              if (height > maxSize) {
+                width *= maxSize / height;
+                height = maxSize;
+              }
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            reviewPhotoData = canvas.toDataURL('image/jpeg', 0.6);
+            
+            const preview = document.getElementById('review-photo-preview');
+            preview.style.display = 'block';
+            preview.innerHTML = `
+              <img src="${reviewPhotoData}" alt="미리보기">
+              <button class="remove-photo" onclick="removeReviewPhoto()">×</button>
+            `;
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    
+    function removeReviewPhoto() {
+      reviewPhotoData = null;
+      document.getElementById('review-photo').value = '';
+      document.getElementById('review-photo-preview').style.display = 'none';
+      document.getElementById('review-photo-preview').innerHTML = '';
+    }
+    
+    function submitReview() {
+      const nickname = document.getElementById('review-nickname').value.trim();
+      const date = document.getElementById('review-date').value;
+      const content = document.getElementById('review-content').value.trim();
+      
+      if (!nickname) {
+        alert('닉네임을 입력해주세요!');
+        return;
+      }
+      if (!date) {
+        alert('봉사 날짜를 선택해주세요!');
+        return;
+      }
+      if (!content) {
+        alert('후기 내용을 입력해주세요!');
+        return;
+      }
+      
+      const reviews = JSON.parse(localStorage.getItem('volunteerReviews') || '[]');
+      
+      reviews.unshift({
+        nickname,
+        date,
+        content,
+        photo: reviewPhotoData,
+        timestamp: Date.now()
+      });
+      
+      // 최대 50개까지 저장 (사진 포함이라 줄임)
+      if (reviews.length > 50) {
+        reviews.pop();
+      }
+      
+      localStorage.setItem('volunteerReviews', JSON.stringify(reviews));
+      
+      // 입력 초기화
+      document.getElementById('review-nickname').value = '';
+      document.getElementById('review-date').value = '';
+      document.getElementById('review-content').value = '';
+      removeReviewPhoto();
+      
+      alert('후기가 등록되었습니다! 감사합니다 💛');
+      loadReviews();
+    }
+    
+    function loadReviews() {
+      const reviews = JSON.parse(localStorage.getItem('volunteerReviews') || '[]');
+      const container = document.getElementById('review-list');
+      
+      if (reviews.length === 0) {
+        container.innerHTML = '<p class="no-review">아직 후기가 없어요.<br>첫 번째 후기를 남겨주세요! 🐕</p>';
+        return;
+      }
+      
+      container.innerHTML = reviews.map(review => `
+        <div class="review-item">
+          <div class="review-item-header">
+            <span class="review-item-nickname">🐾 ${review.nickname}</span>
+            <span class="review-item-date">${review.date}</span>
+          </div>
+          <p class="review-item-content">${review.content}</p>
+          ${review.photo ? `<div class="review-item-photo"><img src="${review.photo}" alt="봉사 사진" onclick="openReviewPhoto('${review.photo}')"></div>` : ''}
+        </div>
+      `).join('');
+    }
+    
+    function openReviewPhoto(src) {
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;z-index:10000;';
+      modal.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;border-radius:10px;">`;
+      modal.onclick = () => modal.remove();
+      document.body.appendChild(modal);
     }
 
     function init() {
