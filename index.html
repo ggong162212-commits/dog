@@ -77,15 +77,16 @@
       display: flex;
       gap: 10px;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 24px;
       padding: 0 16px;
     }
     
     .tab-btn {
-      padding: 14px 20px;
+      padding: 10px 14px;
       border: none;
       border-radius: 16px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       background: rgba(255,255,255,0.7);
@@ -312,13 +313,13 @@
     .naver-cafe-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 14px 20px;
+      gap: 5px;
+      padding: 12px 16px;
       background: linear-gradient(135deg, #03C75A, #02b350);
       color: #fff;
       border: none;
       border-radius: 16px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
@@ -344,13 +345,13 @@
     .insta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 14px 20px;
+      gap: 5px;
+      padding: 12px 16px;
       background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
       color: #fff;
       border: none;
       border-radius: 16px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
@@ -942,12 +943,12 @@
     
     /* 봉사 후기 */
     .review-toggle-btn {
-      padding: 15px 30px;
+      padding: 12px 22px;
       background: linear-gradient(135deg, #A5D6A7, #81C784);
       color: #fff;
       border: none;
       border-radius: 25px;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
@@ -963,18 +964,19 @@
     .volunteer-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-top: 20px;
+      padding: 0 10px;
     }
     
     .volunteer-apply-btn {
-      padding: 15px 30px;
+      padding: 12px 22px;
       background: linear-gradient(135deg, #FFB74D, #FFA726);
       color: #fff;
       border: none;
       border-radius: 25px;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
@@ -1564,6 +1566,199 @@
     .share-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(102, 187, 106, 0.4);
+    }
+    
+    /* 모바일 반응형 */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 20px;
+      }
+      
+      .tabs {
+        gap: 4px;
+        padding: 0 8px;
+      }
+      
+      .tab-btn {
+        padding: 8px 10px;
+        font-size: 10px;
+        border-radius: 12px;
+      }
+      
+      .room-btn {
+        padding: 10px 12px;
+        font-size: 10px;
+        min-width: 80px;
+      }
+      
+      .link-buttons {
+        gap: 6px;
+        padding: 0 8px;
+      }
+      
+      .naver-cafe-btn, .insta-btn {
+        padding: 8px 10px;
+        font-size: 10px;
+        border-radius: 12px;
+        gap: 4px;
+      }
+      
+      .naver-cafe-btn svg, .insta-btn svg {
+        width: 14px;
+        height: 14px;
+      }
+      
+      .volunteer-buttons {
+        gap: 8px;
+        padding: 0 10px;
+      }
+      
+      .review-toggle-btn, .volunteer-apply-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+        border-radius: 20px;
+      }
+      
+      .donate-container {
+        padding: 10px;
+      }
+      
+      .donate-header h2 {
+        font-size: 16px;
+      }
+      
+      .donate-header p {
+        font-size: 12px;
+      }
+      
+      .donate-account-box {
+        padding: 15px;
+      }
+      
+      .donate-account {
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+      
+      .donate-name {
+        font-size: 12px;
+        word-break: keep-all;
+      }
+      
+      .donate-copy-btn {
+        padding: 10px 18px;
+        font-size: 12px;
+      }
+      
+      .donate-info {
+        padding: 15px;
+      }
+      
+      .donate-info p {
+        font-size: 11px;
+      }
+      
+      .game-menu-btn {
+        padding: 14px;
+        font-size: 14px;
+      }
+      
+      .game-menu-btn span {
+        font-size: 10px;
+      }
+      
+      .card {
+        width: 65px;
+        height: 65px;
+      }
+      
+      .card-grid {
+        gap: 6px;
+        padding: 8px;
+      }
+      
+      .modal-content {
+        padding: 12px;
+        max-width: 95%;
+      }
+      
+      .modal-dog-name {
+        font-size: 18px;
+      }
+      
+      .modal-buttons {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .modal-buttons button {
+        width: 100%;
+        padding: 12px;
+        font-size: 13px;
+      }
+      
+      .review-container {
+        padding: 12px;
+      }
+      
+      .nickname-box {
+        padding: 15px;
+      }
+      
+      .nickname-box input {
+        max-width: 160px;
+        font-size: 14px;
+      }
+      
+      .quiz-container {
+        padding: 15px;
+      }
+      
+      .quiz-title {
+        font-size: 16px;
+      }
+      
+      .quiz-option {
+        padding: 12px;
+        font-size: 13px;
+      }
+    }
+    
+    /* 아주 작은 화면 (360px 이하) */
+    @media (max-width: 360px) {
+      header h1 {
+        font-size: 18px;
+      }
+      
+      .tab-btn {
+        padding: 6px 8px;
+        font-size: 9px;
+      }
+      
+      .room-btn {
+        padding: 8px 10px;
+        font-size: 9px;
+        min-width: 70px;
+      }
+      
+      .naver-cafe-btn, .insta-btn {
+        padding: 6px 8px;
+        font-size: 9px;
+      }
+      
+      .review-toggle-btn, .volunteer-apply-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+      
+      .donate-account {
+        font-size: 16px;
+      }
+      
+      .card {
+        width: 55px;
+        height: 55px;
+      }
     }
   </style>
 </head>
