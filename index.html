@@ -1820,39 +1820,14 @@
         </a>
       </div>
       
-      <!-- 봉사 버튼들 -->
+      <!-- 봉사 신청 버튼 -->
       <div class="volunteer-buttons">
-        <button class="review-toggle-btn" onclick="toggleReviewSection()">
-          📝 봉사 후기 보기
-        </button>
         <a href="https://open.kakao.com/o/sOHEe74h" target="_blank" class="volunteer-apply-btn">
           ✋ 봉사 신청하기
         </a>
       </div>
       
-      <!-- 봉사 후기 섹션 -->
-      <div id="review-section" style="display: none; padding: 20px;">
-        <div class="review-container">
-          <h3 style="text-align: center; color: #5D4E37; margin-bottom: 20px;">📝 봉사 후기</h3>
-          
-          <!-- 후기 작성 -->
-          <div class="review-form">
-            <input type="text" id="review-nickname" placeholder="닉네임" maxlength="10">
-            <input type="date" id="review-date">
-            <textarea id="review-content" placeholder="봉사 후기를 남겨주세요! (최대 200자)" maxlength="200"></textarea>
-            <div class="review-photo-upload">
-              <label for="review-photo" class="photo-upload-btn">📷 사진 첨부 (선택)</label>
-              <input type="file" id="review-photo" accept="image/*" onchange="previewReviewPhoto(this)" style="display: none;">
-              <div id="review-photo-preview"></div>
-            </div>
-            <button class="review-submit-btn" onclick="submitReview()">후기 등록</button>
-          </div>
-          
-          <!-- 후기 목록 -->
-          <div id="review-list" class="review-list"></div>
-        </div>
       </div>
-    </div>
 
     <!-- 퀴즈 섹션 -->
     <div id="quiz-section">
@@ -1954,10 +1929,6 @@
             ❓ 이름 맞추기
             <span>사진 보고 이름 맞추기</span>
           </button>
-          <button class="game-menu-btn" onclick="showRanking()" style="background: #FFF9E6;">
-            🏆 랭킹 보기
-            <span>최고 점수 확인</span>
-          </button>
         </div>
         
         <!-- 닉네임 입력 -->
@@ -1969,19 +1940,6 @@
             <p id="nickname-error" style="color: #FF5252; font-size: 12px; margin: 5px 0; display: none;"></p>
             <button class="game-btn" id="start-game-btn" onclick="startSelectedGame()">시작하기</button>
             <button class="back-btn" onclick="backToGameMenu()">취소</button>
-          </div>
-        </div>
-        
-        <!-- 랭킹 보기 -->
-        <div id="ranking-view" style="display: none;">
-          <div class="game-header">
-            <button class="back-btn" onclick="backToGameMenu()">← 돌아가기</button>
-          </div>
-          <div class="ranking-container">
-            <h3>🏆 카드 뒤집기 랭킹</h3>
-            <div id="card-ranking" class="ranking-list"></div>
-            <h3 style="margin-top: 20px;">🏆 이름 맞추기 랭킹</h3>
-            <div id="name-ranking" class="ranking-list"></div>
           </div>
         </div>
         
@@ -2385,71 +2343,11 @@
       }
     }
     
-    function showRanking() {
-      document.querySelector('.game-menu').style.display = 'none';
-      document.getElementById('ranking-view').style.display = 'block';
-      
-      displayRanking('card-ranking', 'cardRanking');
-      displayRanking('name-ranking', 'nameRanking');
-    }
-    
-    function displayRanking(elementId, storageKey) {
-      const rankings = JSON.parse(localStorage.getItem(storageKey) || '{}');
-      const container = document.getElementById(elementId);
-      
-      // 객체를 배열로 변환 후 정렬
-      let rankingArray;
-      if (storageKey === 'cardRanking') {
-        // 카드 게임은 시간순 (빠를수록 좋음)
-        rankingArray = Object.entries(rankings)
-          .map(([nickname, time]) => ({ nickname, time }))
-          .sort((a, b) => a.time - b.time);
-      } else {
-        // 이름 맞추기는 점수순 (높을수록 좋음)
-        rankingArray = Object.entries(rankings)
-          .map(([nickname, score]) => ({ nickname, score }))
-          .sort((a, b) => b.score - a.score);
-      }
-      
-      if (rankingArray.length === 0) {
-        container.innerHTML = '<p class="no-ranking">아직 기록이 없어요!</p>';
-        return;
-      }
-      
-      if (storageKey === 'cardRanking') {
-        container.innerHTML = rankingArray.slice(0, 10).map((item, index) => `
-          <div class="ranking-item">
-            <span class="rank">${index + 1}위</span>
-            <span class="nickname">${item.nickname}</span>
-            <span class="score">${item.time}초</span>
-          </div>
-        `).join('');
-      } else {
-        container.innerHTML = rankingArray.slice(0, 10).map((item, index) => `
-          <div class="ranking-item">
-            <span class="rank">${index + 1}위</span>
-            <span class="nickname">${item.nickname}</span>
-            <span class="score">${item.score}점</span>
-          </div>
-        `).join('');
-      }
-    }
-    
-    function saveRanking(storageKey, score) {
-      const rankings = JSON.parse(localStorage.getItem(storageKey) || '{}');
-      
-      // 기존 점수가 있으면 최고 점수만 저장
-      if (rankings[currentNickname]) {
-        if (score > rankings[currentNickname]) {
-          rankings[currentNickname] = score;
-        }
-        // 기존 점수가 더 높으면 유지
-      } else {
-        rankings[currentNickname] = score;
-      }
-      
-      localStorage.setItem(storageKey, JSON.stringify(rankings));
-    }
+    // 랭킹 기능 비활성화
+    function showRanking() {}
+    function displayRanking() {}
+    function renderRankingList() {}
+    function saveRanking() {}
     
     // 카드 뒤집기 게임
     function startCardGame() {
@@ -2542,14 +2440,7 @@
     }
     
     function saveCardRanking(time) {
-      const rankings = JSON.parse(localStorage.getItem('cardRanking') || '{}');
-      
-      // 기존 기록이 없거나 새 기록이 더 빠르면 저장
-      if (!rankings[currentNickname] || time < rankings[currentNickname]) {
-        rankings[currentNickname] = time;
-      }
-      
-      localStorage.setItem('cardRanking', JSON.stringify(rankings));
+      // 랭킹 기능 비활성화
     }
     
     function shareCardScore(time) {
@@ -2713,148 +2604,16 @@
     }
 
     // 봉사 후기 기능
-    let reviewPhotoData = null;
+    // 후기 기능 비활성화
     
-    function toggleReviewSection() {
-      const section = document.getElementById('review-section');
-      const btn = document.querySelector('.review-toggle-btn');
-      
-      if (section.style.display === 'none') {
-        section.style.display = 'block';
-        btn.textContent = '📝 봉사 후기 접기';
-        loadReviews();
-      } else {
-        section.style.display = 'none';
-        btn.textContent = '📝 봉사 후기 보기';
-      }
-    }
-    
-    function previewReviewPhoto(input) {
-      if (input.files && input.files[0]) {
-        const file = input.files[0];
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-          // 이미지 리사이즈
-          const img = new Image();
-          img.onload = function() {
-            const canvas = document.createElement('canvas');
-            const maxSize = 300;
-            let width = img.width;
-            let height = img.height;
-            
-            if (width > height) {
-              if (width > maxSize) {
-                height *= maxSize / width;
-                width = maxSize;
-              }
-            } else {
-              if (height > maxSize) {
-                width *= maxSize / height;
-                height = maxSize;
-              }
-            }
-            
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(img, 0, 0, width, height);
-            
-            reviewPhotoData = canvas.toDataURL('image/jpeg', 0.6);
-            
-            const preview = document.getElementById('review-photo-preview');
-            preview.style.display = 'block';
-            preview.innerHTML = `
-              <img src="${reviewPhotoData}" alt="미리보기">
-              <button class="remove-photo" onclick="removeReviewPhoto()">×</button>
-            `;
-          };
-          img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      }
-    }
-    
-    function removeReviewPhoto() {
-      reviewPhotoData = null;
-      document.getElementById('review-photo').value = '';
-      document.getElementById('review-photo-preview').style.display = 'none';
-      document.getElementById('review-photo-preview').innerHTML = '';
-    }
-    
-    function submitReview() {
-      const nickname = document.getElementById('review-nickname').value.trim();
-      const date = document.getElementById('review-date').value;
-      const content = document.getElementById('review-content').value.trim();
-      
-      if (!nickname) {
-        alert('닉네임을 입력해주세요!');
-        return;
-      }
-      if (!date) {
-        alert('봉사 날짜를 선택해주세요!');
-        return;
-      }
-      if (!content) {
-        alert('후기 내용을 입력해주세요!');
-        return;
-      }
-      
-      const reviews = JSON.parse(localStorage.getItem('volunteerReviews') || '[]');
-      
-      reviews.unshift({
-        nickname,
-        date,
-        content,
-        photo: reviewPhotoData,
-        timestamp: Date.now()
-      });
-      
-      // 최대 50개까지 저장 (사진 포함이라 줄임)
-      if (reviews.length > 50) {
-        reviews.pop();
-      }
-      
-      localStorage.setItem('volunteerReviews', JSON.stringify(reviews));
-      
-      // 입력 초기화
-      document.getElementById('review-nickname').value = '';
-      document.getElementById('review-date').value = '';
-      document.getElementById('review-content').value = '';
-      removeReviewPhoto();
-      
-      alert('후기가 등록되었습니다! 감사합니다 💛');
-      loadReviews();
-    }
-    
-    function loadReviews() {
-      const reviews = JSON.parse(localStorage.getItem('volunteerReviews') || '[]');
-      const container = document.getElementById('review-list');
-      
-      if (reviews.length === 0) {
-        container.innerHTML = '<p class="no-review">아직 후기가 없어요.<br>첫 번째 후기를 남겨주세요! 🐕</p>';
-        return;
-      }
-      
-      container.innerHTML = reviews.map(review => `
-        <div class="review-item">
-          <div class="review-item-header">
-            <span class="review-item-nickname">🐾 ${review.nickname}</span>
-            <span class="review-item-date">${review.date}</span>
-          </div>
-          <p class="review-item-content">${review.content}</p>
-          ${review.photo ? `<div class="review-item-photo"><img src="${review.photo}" alt="봉사 사진" onclick="openReviewPhoto('${review.photo}')"></div>` : ''}
-        </div>
-      `).join('');
-    }
-    
-    function openReviewPhoto(src) {
-      const modal = document.createElement('div');
-      modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;z-index:10000;';
-      modal.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;border-radius:10px;">`;
-      modal.onclick = () => modal.remove();
-      document.body.appendChild(modal);
-    }
+    // 후기 기능 비활성화
+    function toggleReviewSection() {}
+    function previewReviewPhoto() {}
+    function removeReviewPhoto() {}
+    function submitReview() {}
+    function loadReviews() {}
+    function displayReviewsList() {}
+    function openReviewPhoto() {}
 
     function init() {
       const container = document.getElementById('rooms-container');
